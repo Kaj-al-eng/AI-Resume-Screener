@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Resume Screener
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/login">Login</a></li>
+
+            <li><a href="/signup">Signup</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Dashboard -->
+
+    <div class="container">
+
+        <h2>Dashboard</h2>
+
+        <p style="text-align:center; margin-bottom:25px;">
+
+            Welcome to your AI Resume Screener Dashboard 🚀
+
+        </p>
+
+        <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+            <label>Upload Resume</label>
+
+            <input type="file" name="resume" required>
+
+            <label>Required Skills</label>
+
+            <input type="text"
+                   name="skills"
+                   placeholder="python, html, css"
+                   required>
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

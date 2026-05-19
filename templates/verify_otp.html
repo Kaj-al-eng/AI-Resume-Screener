@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#36d1dc,#5b86e5);
+        }
+
+        .box{
+            width:400px;
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:10px;
+            color:#333;
+        }
+
+        p{
+            color:gray;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:14px;
+            margin-bottom:20px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            background:#2575fc;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#125be0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+
+        <h1>Verify OTP</h1>
+
+        <p>Enter OTP sent to your email</p>
+
+        <form action="/verify-otp" method="POST">
+
+            <!-- EMAIL HIDDEN FIELD -->
+            <input type="hidden" name="email" value="{{ email }}">
+
+            <input
+                type="text"
+                name="otp"
+                placeholder="Enter OTP"
+                required
+            >
+
+            <button type="submit">
+                Verify OTP
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

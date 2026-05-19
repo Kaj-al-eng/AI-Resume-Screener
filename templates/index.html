@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Resume Screener</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            AI Resume Screener
+        </div>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/login">Login</a></li>
+
+            <li><a href="/signup">Signup</a></li>
+
+            <li><a href="/forgot">Forgot Password</a></li>
+
+            <li><a href="/about">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <h1>Smart AI Resume Screening System</h1>
+
+        <p>
+            Analyze resumes instantly and match skills with job requirements using AI-powered screening.
+        </p>
+
+        <div class="form-box">
+
+            <h2>Upload Resume</h2>
+
+            <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+                <label>Upload Resume (PDF)</label>
+
+                <input type="file" name="resume" required>
+
+                <label>Enter Required Skills</label>
+
+                <input type="text" name="skills" placeholder="python, html, css, java" required>
+
+                <button type="submit">
+                    Analyze Resume
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
